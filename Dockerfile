@@ -7,8 +7,8 @@ COPY . /usr/src/dockertest1
 # Specify the working directory
 WORKDIR /usr/src/dockertest1
 
-# Use GCC to compile the Test.cpp source file
-RUN g++ -o test test.cpp
+# Use GCC to compile the *.cpp source file
+RUN g++ -o main *.cpp 
 
 # Run the program output from the previous step
-CMD ["./test"]
+CMD ["./main"]
