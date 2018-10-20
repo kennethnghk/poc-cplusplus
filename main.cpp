@@ -23,6 +23,7 @@ int globalCount = 10;
 extern void counter(void);
 void testFunctions();
 void arrayFunctions();
+void pointerFunctions();
 
 int main(int argc, char const *argv[])
 {
@@ -48,6 +49,7 @@ int main(int argc, char const *argv[])
 
     testFunctions();
     arrayFunctions();
+    pointerFunctions();
 
     return 0;
 }
