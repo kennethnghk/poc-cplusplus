@@ -21,28 +21,31 @@ int globalCount = 10;
 
 // declare function, extern means global to all files
 extern void counter(void);
+void testFunctions();
 
 int main(int argc, char const *argv[])
 {
-  cout << "Hello World2" << endl;
-  cout << "Size of char : " << sizeof(char) << endl;
+    cout << "Hello World2" << endl;
+    cout << "Size of char : " << sizeof(char) << endl;
 
-  enum color { red, green, blue } c;
-  c = blue;
-  cout << "c is " << c << endl;
+    enum color { red, green, blue } c;
+    c = blue;
+    cout << "c is " << c << endl;
 
-  int testFuncResult = testFunc();
-  cout << "testFuncResult: " << testFuncResult << endl;
+    int testFuncResult = testFunc();
+    cout << "testFuncResult: " << testFuncResult << endl;
 
-  cout << "g is " << g << endl;
-  cout << "empty char is " << emptyChar << endl;
+    cout << "g is " << g << endl;
+    cout << "empty char is " << emptyChar << endl;
 
-  cout << "fixed const: " << FIXED_CONSTANT << endl;
-  cout << "specific type const: " << SPECIFIC_TYPE_CONST << endl;
+    cout << "fixed const: " << FIXED_CONSTANT << endl;
+    cout << "specific type const: " << SPECIFIC_TYPE_CONST << endl;
 
-  while(globalCount--) {
-      counter();
-   }
+    while(globalCount--) {
+        counter();
+    }
 
-  return 0;
+    testFunctions();
+
+    return 0;
 }
