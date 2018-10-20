@@ -22,6 +22,7 @@ int globalCount = 10;
 // declare function, extern means global to all files
 extern void counter(void);
 void testFunctions();
+void arrayFunctions();
 
 int main(int argc, char const *argv[])
 {
@@ -46,6 +47,7 @@ int main(int argc, char const *argv[])
     }
 
     testFunctions();
+    arrayFunctions();
 
     return 0;
 }

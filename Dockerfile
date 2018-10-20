@@ -1,5 +1,5 @@
 # Get the GCC preinstalled image from Docker Hub
-FROM gcc:4.9
+FROM gcc:latest
 
 # Copy the current folder which contains C++ source code to the Docker image under /usr/src
 COPY . /usr/src/dockertest1
