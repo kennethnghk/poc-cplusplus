@@ -1,4 +1,6 @@
 #include <iostream>
+#include <ctime>
+
 using namespace std;
 
 // define constant
@@ -48,6 +50,13 @@ int main(int argc, char const *argv[])
     while(globalCount--) {
         counter();
     }
+
+    // time functions
+    time_t now = time(0);
+    cout << "current timestamp is " << now << endl;
+
+    char *nowString = ctime(&now);
+    cout << "current time is " << nowString << endl;
 
     cout << endl;
     arrayFunctions();
