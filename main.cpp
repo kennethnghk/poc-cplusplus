@@ -21,9 +21,10 @@ int globalCount = 10;
 
 // declare function, extern means global to all files
 extern void counter(void);
-void testFunctions();
+
 void arrayFunctions();
 void pointerFunctions();
+void swapFunctions();
 
 int main(int argc, char const *argv[])
 {
@@ -47,8 +48,13 @@ int main(int argc, char const *argv[])
         counter();
     }
 
-    testFunctions();
+    cout << endl;
     arrayFunctions();
+
+    cout << endl;
+    swapFunctions();
+
+    cout << endl;
     pointerFunctions();
 
     return 0;
