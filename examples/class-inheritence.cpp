@@ -13,6 +13,9 @@ class Shape {
         int getArea(void) {
             return width * height;
         }
+        void printPerimeter(void) {
+            cout << "No perimeter is printed at base class" << endl;
+        }
       
     protected:
         int width;
@@ -30,12 +33,26 @@ class PaintCost {
 class Square: public Shape, public PaintCost {
     public:
         Square(int w): Shape(w, w) {};
+
+        void printPerimeter(void) {
+            cout << "Square perimeter: " << (height * 4) << endl;
+        };
+    
+};
+
+class Rectangle: public Shape {
+    public:
+        Rectangle(int w, int h): Shape(w, w) {};
 };
 
 void subClassFunctions() {
     Square square(10);
+    Rectangle rect(10, 20);
 
     int area = square.getArea();
     cout << "Area of square: " << area << endl;
     cout << "PaintCost: " << square.getCost(area) << endl;
+
+    square.printPerimeter();
+    rect.printPerimeter();
 }
