@@ -30,6 +30,7 @@ void pointerFunctions();
 void referenceFunctions();
 void swapFunctions();
 void structFunctions();
+void classFunctions();
 
 int main(int argc, char const *argv[])
 { 
@@ -76,6 +77,9 @@ int main(int argc, char const *argv[])
 
     cout << endl;
     structFunctions();
+
+    cout << endl;
+    classFunctions();
 
     return 0;
 }
