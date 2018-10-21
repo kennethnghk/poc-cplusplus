@@ -62,3 +62,20 @@ void pointerFunctions()
     cout << "after (*pnt = *pnt + 100), address stored of pnt: " << pnt << endl;
     cout << "after (*pnt = *pnt + 100), value of *pnt: " << *pnt << endl;
 }
+
+void referenceFunctions()
+{
+    int var = 99;
+    int &ref = var;
+
+    cout << "value of var : " << var << endl;
+    cout << "value of ref : " << ref << endl;
+
+    var = var + 100;
+    cout << "after (var = var + 100), value of var: " << var << endl;
+    cout << "after (var = var + 100), value of ref: " << ref << endl;
+
+    ref = ref + 100;
+    cout << "after (ref = ref + 100), value of var: " << var << endl;
+    cout << "after (ref = ref + 100), value of ref: " << ref << endl;
+}

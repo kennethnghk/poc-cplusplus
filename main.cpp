@@ -24,6 +24,7 @@ extern void counter(void);
 
 void arrayFunctions();
 void pointerFunctions();
+void referenceFunctions();
 void swapFunctions();
 
 int main(int argc, char const *argv[])
@@ -56,6 +57,9 @@ int main(int argc, char const *argv[])
 
     cout << endl;
     pointerFunctions();
+
+    cout<< endl;
+    referenceFunctions();
 
     return 0;
 }
