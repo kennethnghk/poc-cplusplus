@@ -32,6 +32,7 @@ void swapFunctions();
 void structFunctions();
 void classFunctions();
 void subClassFunctions();
+void overloadFunctions();
 
 int main(int argc, char const *argv[])
 { 
@@ -84,6 +85,9 @@ int main(int argc, char const *argv[])
 
     cout << endl;
     subClassFunctions();
+
+    cout << endl;
+    overloadFunctions();
 
     return 0;
 }
