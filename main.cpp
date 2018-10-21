@@ -24,6 +24,7 @@ int globalCount = 10;
 // declare function, extern means global to all files
 extern void counter(void);
 
+void stringFunctions();
 void arrayFunctions();
 void pointerFunctions();
 void referenceFunctions();
@@ -31,9 +32,6 @@ void swapFunctions();
 
 int main(int argc, char const *argv[])
 {
-    cout << "Hello World2" << endl;
-    cout << "Size of char : " << sizeof(char) << endl;
-
     enum color { red, green, blue } c;
     c = blue;
     cout << "c is " << c << endl;
@@ -67,8 +65,11 @@ int main(int argc, char const *argv[])
     cout << endl;
     pointerFunctions();
 
-    cout<< endl;
+    cout << endl;
     referenceFunctions();
+
+    cout << endl;
+    stringFunctions();
 
     return 0;
 }
