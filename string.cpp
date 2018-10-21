@@ -15,5 +15,7 @@ void stringFunctions()
     cin >> stringName;
     cout << "The stringName is : " << stringName << endl;
 
+    cerr << "Error message is here " << endl;
+
     return;
 }

@@ -31,7 +31,7 @@ void referenceFunctions();
 void swapFunctions();
 
 int main(int argc, char const *argv[])
-{
+{ 
     enum color { red, green, blue } c;
     c = blue;
     cout << "c is " << c << endl;
