@@ -9,8 +9,12 @@ class Box {
         int width;
         int height;
         int length;
+        static int boxCount;
 
-        Box(int, int, int); // constructor
+        Box(int wid, int len, int hgt):width(wid),length(len) { // assign width and height member
+            height = hgt * 2;
+            boxCount++;
+        }
 
         void setName(string);
         void setWidth(int newWidth) { // inline function
@@ -24,12 +28,15 @@ class Box {
             return width * height * length;
         }
         
+        // static member function
+        static int getBoxCount(void) {
+            return boxCount;
+        }
+
         friend void printName(Box box);
 };
 
-Box::Box(int wid, int len, int hgt):width(wid),length(len) { // assign width and height member
-    height = hgt * 2;
-}
+int Box::boxCount = 0;
 
 void Box::setName(string newName) {
     name = newName;
@@ -42,6 +49,9 @@ void printName(Box box) {
 
 void classFunctions() {
     Box box1(40, 50, 70);
+    Box box2(90, 111, 20);
+    Box *box1ptr = &box1; // declare pointer box1ptr
+
     box1.setName("hahabox");
 
     cout << "Height : " << box1.height << endl;
@@ -50,6 +60,12 @@ void classFunctions() {
     box1.setWidth(90);
     cout << "New volume : " << box1.getVolume() << endl;
     cout << "Box1 name : " << box1.getName() << endl;
+    cout << "Pointer box1 name : " << box1ptr->getName() << endl;
+
+    cout << "Box count box1.boxCount: " << box1.boxCount << endl;
+    cout << "Box count box2.boxCount: " << box2.boxCount << endl;
+    cout << "Box count Box::boxCount: " << Box::boxCount << endl;
+    cout << "Box count Box::getBoxCount: " << Box::getBoxCount() << endl;
 
     printName(box1);
 }
