@@ -2,13 +2,13 @@
 FROM gcc:latest
 
 # Copy the current folder which contains C++ source code to the Docker image under /usr/src
-COPY . /usr/src/dockertest1
+COPY . /usr/src/app
 
 # Specify the working directory
-WORKDIR /usr/src/dockertest1
+WORKDIR /usr/src/app
 
 # Use GCC to compile the *.cpp source file
-RUN g++ -o main *.cpp 
+RUN g++ -o main examples/*.cpp 
 
 # Run the program output from the previous step
 CMD ["./main"]

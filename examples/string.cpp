@@ -16,6 +16,7 @@ void stringFunctions()
     cout << "The stringName is : " << stringName << endl;
 
     cerr << "Error message is here " << endl;
+    clog << "Error log is here " << endl;
 
     return;
 }
