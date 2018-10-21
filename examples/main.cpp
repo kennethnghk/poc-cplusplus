@@ -29,6 +29,7 @@ void arrayFunctions();
 void pointerFunctions();
 void referenceFunctions();
 void swapFunctions();
+void structFunctions();
 
 int main(int argc, char const *argv[])
 { 
@@ -68,8 +69,13 @@ int main(int argc, char const *argv[])
     cout << endl;
     referenceFunctions();
 
+    /* commented so as to speed up development
     cout << endl;
     stringFunctions();
+    */
+
+    cout << endl;
+    structFunctions();
 
     return 0;
 }
