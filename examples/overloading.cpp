@@ -3,11 +3,15 @@ using namespace std;
 
 class Box {
     public:
-        Box(int w, int h, int l):width(w),height(h),length(l){};
-
         int getVolume(void) {
             return width * height * length;
-        }
+        };
+
+        void setDimentions(int w, int h, int l){
+            width = w;
+            height = h;
+            length = l;
+        };
 
         // overload the + operator
         Box operator+(const Box &b) {
@@ -17,7 +21,8 @@ class Box {
             int newLength = this->length + b.length;
             
             // create new object
-            Box box(newWidth, newHeight, newLength);
+            Box box;
+            box.setDimentions(newWidth, newHeight, newLength);
             return box;
         }
 
@@ -45,9 +50,13 @@ void overloadFunctions() {
     printData.print(1);
     printData.print("whyhaha");
 
-    Box box1(1,1,1);
-    Box box2(2,2,2);
+    Box box1;
+    Box box2;
+    Box box3;
 
-    Box box3 = box1 + box2;
+    box1.setDimentions(1,1,1);
+    box2.setDimentions(2,2,2);
+
+    box3 = box1 + box2;
     cout << "Volume of box3 is " << box3.getVolume() << endl;
 }

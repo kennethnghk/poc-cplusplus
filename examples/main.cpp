@@ -33,6 +33,7 @@ void structFunctions();
 void classFunctions();
 void subClassFunctions();
 void overloadFunctions();
+void interfaceClassFunctions();
 
 int main(int argc, char const *argv[])
 { 
@@ -88,6 +89,9 @@ int main(int argc, char const *argv[])
 
     cout << endl;
     overloadFunctions();
+
+    cout << endl;
+    interfaceClassFunctions();
 
     return 0;
 }

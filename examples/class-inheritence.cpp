@@ -42,7 +42,7 @@ class Square: public Shape, public PaintCost {
 
 class Rectangle: public Shape {
     public:
-        Rectangle(int w, int h): Shape(w, w) {};
+        Rectangle(int w, int h): Shape(w, h) {};
 };
 
 void subClassFunctions() {
