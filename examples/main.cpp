@@ -34,6 +34,7 @@ void classFunctions();
 void subClassFunctions();
 void overloadFunctions();
 void interfaceClassFunctions();
+void templateFunctions();
 
 int main(int argc, char const *argv[])
 { 
@@ -92,6 +93,9 @@ int main(int argc, char const *argv[])
 
     cout << endl;
     interfaceClassFunctions();
+
+    cout << endl;
+    templateFunctions();
 
     return 0;
 }
