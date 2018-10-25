@@ -1,39 +1,41 @@
 #include <iostream>
 using namespace std;
 
-// Base class, ie. interface
-class ShapeClass {
-    protected:
-        int width;
-        int height;
+namespace AbstractClass {
+    // Base class, ie. interface
+    class Shape {
+        protected:
+            int width;
+            int height;
 
-    public:
-        // pure virtual functon for interface class
-        virtual int getArea() = 0;
-        ShapeClass(int w, int h) : width(w), height(h) {};
-};
+        public:
+            // pure virtual functon for interface class
+            virtual int getArea() = 0;
+            Shape(int w, int h) : width(w), height(h) {};
+    };
 
-// Derived class
-class RectangleClass: public ShapeClass {
-    public:
-        RectangleClass(int w, int h): ShapeClass(w,h) {};
-        int getArea() {
-            return (width * height);
-        }
-};
+    // Derived class
+    class Rectangle: public Shape {
+        public:
+            Rectangle(int w, int h): Shape(w,h) {};
+            int getArea() {
+                return (width * height);
+            }
+    };
 
-class TriangleClass: public ShapeClass {
-    public:
-        TriangleClass(int w, int h): ShapeClass(w,h) {};
-        int getArea() {
-            return (width * height)/2;
-        }
-};
+    class Triangle: public Shape {
+        public:
+            Triangle(int w, int h): Shape(w,h) {};
+            int getArea() {
+                return (width * height)/2;
+            }
+    };
+}
 
 void interfaceClassFunctions() {
-    RectangleClass rect(10,20);
-    TriangleClass tri(10,20);
+    AbstractClass::Rectangle rect(10,20);
+    AbstractClass::Triangle tri(10,20);
 
-    cout << "Area of RectangleClass: " << rect.getArea() << endl;
-    cout << "Area of TriangleClass: " << tri.getArea() << endl;
+    cout << "Area of Rectangle: " << rect.getArea() << endl;
+    cout << "Area of Triangle: " << tri.getArea() << endl;
 }
